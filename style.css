@@ -1,0 +1,46 @@
+/* Предупреждение в виде дорожной ленты */
+.warning {
+  padding: 0.8rem;
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+  background: repeating-linear-gradient(45deg, #ffd600, #ffd600 20px, #222 20px, #222 40px);
+  text-shadow: 0 0 6px #ffd600, 0 0 6px #ffd600, 0 0 6px #ffd600;
+}
+
+/* Убегающая кнопка */
+#noBtn.run { position: fixed; }
+
+/* Падающая капусточка */
+.cabbage {
+  position: fixed;
+  top: -50px;
+  z-index: 5;
+  pointer-events: none;
+  animation: fall linear forwards;
+}
+@keyframes fall { to { transform: translateY(110vh) rotate(360deg); } }
+
+/* Надпись «АМ!» при укусе */
+.bite {
+  position: fixed;
+  z-index: 50;
+  pointer-events: none;
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: #d32f2f;
+  animation: biteUp 0.8s ease-out forwards;
+}
+@keyframes biteUp { to { transform: translateY(-60px) scale(1.5); opacity: 0; } }
+
+/* Баннер куки */
+.cookie {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 100;
+  padding: 1rem;
+  text-align: center;
+  background: #222;
+  color: white;
+}
+.cookie-btn { margin: 0.3rem; padding: 0.6rem 1.4rem; cursor: pointer; }
